@@ -1,0 +1,21 @@
+#app-title {
+  font-family: 'Bungee', cursive, sans-serif;
+}
+
+#new-tweet {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+#navbar {
+  background: #4056A1;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  height: 120px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+  justify-content: space-between;
+  padding: 1.5em;
+}
