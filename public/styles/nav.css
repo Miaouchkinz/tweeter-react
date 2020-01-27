@@ -1,9 +1,11 @@
 #app-title {
   font-family: 'Bungee', cursive, sans-serif;
+  font-size: 1.75em;
 }
 
 #new-tweet {
   font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.25em;
 }
 
 #navbar {
