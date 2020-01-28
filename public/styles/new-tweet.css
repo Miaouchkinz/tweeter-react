@@ -21,6 +21,10 @@
   font-family: 'Bungee', cursive, sans-serif;
 }
 
+#counter.invalid-char-count {
+  color: red;
+}
+
 
 #tweet-text-box {
   display: block;
