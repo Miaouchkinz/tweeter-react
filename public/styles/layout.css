@@ -23,12 +23,12 @@ body {
 }
 
 main {
-  width: 90%;
-  justify-content: center;
-  background-color: #d49731;
   display: flex;
+  justify-content: center;
   flex-direction: column;
-  margin-left: 5%;
+  margin: auto;
+  width: 90%;
+  background-color: #d49731;
 }
 
 /*
