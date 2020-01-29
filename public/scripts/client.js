@@ -5,17 +5,17 @@
  */
 
 // Test / driver code (temporary). Eventually will get this from the server.
-const tweetData = {
-  "user": {
-    "name": "Newton",
-    "avatars": "https://i.imgur.com/73hZDYK.png",
-    "handle": "@SirIsaac"
-    },
-  "content": {
-    "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-  "created_at": 1461116232227
-}
+// const tweetData = {
+//   "user": {
+//     "name": "Newton",
+//     "avatars": "https://i.imgur.com/73hZDYK.png",
+//     "handle": "@SirIsaac"
+//     },
+//   "content": {
+//     "text": "If I have seen further it is by standing on the shoulders of giants"
+//     },
+//   "created_at": 1461116232227
+// }
 
 // This function can be responsible for taking in an array of tweet objects and then appending each one to the #tweets-container. 
 // In order to do this, the renderTweets will need to leverage the createTweetElement function you wrote earlier by passing the
@@ -24,12 +24,10 @@ const tweetData = {
 const renderTweets = function() {
   let $tweetContainer = $('#tweet-container');
   // loops through tweets
-  for (let tweets in tweetData) {
-  // calls createTweetElement for each tweet
-    const tweet = createTweetElement(tweets);
-  // takes return value and appends it to the tweets container
-    $tweetContainer.append(tweet)
-  }
+  data.forEach(tweet => {
+    const tweetHTML = createTweetElement(tweet);
+    $tweetContainer.append(tweetHTML);
+  })
 }
 
 const createTweetElement = function(tweet) {
@@ -79,10 +77,6 @@ const createTweetElement = function(tweet) {
   return $tweet;
 }
 
-// Will need to pass a callback that has renderTweets inside of it being called
-// Will need to change the for loop to work for an array
-$(document).ready(renderTweets);
-
 // Test / driver code (temporary)
 // const $tweet = createTweetElement(tweetData);
 // console.log($tweet); // to see what it looks like
@@ -95,4 +89,15 @@ $('.create-tweet > form').on('submit', (event) => {
     url: '/tweets/',
     data: $('form').serialize()
   })
+});
+
+// Will need to pass a callback that has renderTweets inside of it being called
+// Will need to change the for loop to work for an array
+$(document).ready(function loadtweets() {
+  $.ajax({
+    method: 'GET',
+    url: '/tweets/'
+  })
+  .done((data) => renderTweets(data))
+  // .fail(handleTweetLoadErrors);
 });
