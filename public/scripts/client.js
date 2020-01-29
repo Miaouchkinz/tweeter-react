@@ -21,14 +21,7 @@
 // In order to do this, the renderTweets will need to leverage the createTweetElement function you wrote earlier by passing the
 // tweet object to it, then using the returned jQuery object by appending it to the #tweets-container section.
 
-const renderTweets = function() {
-  let $tweetContainer = $('#tweet-container');
-  // loops through tweets
-  data.forEach(tweet => {
-    const tweetHTML = createTweetElement(tweet);
-    $tweetContainer.append(tweetHTML);
-  })
-}
+$(document).ready(() => { 
 
 const createTweetElement = function(tweet) {
   let $tweet = $('<article>').addClass('tweet');
@@ -77,6 +70,19 @@ const createTweetElement = function(tweet) {
   return $tweet;
 }
 
+const renderTweets = function(allTweets) {
+  let $tweetContainer = $('#tweet-container');
+  // loops through tweets
+  // allTweets.forEach(tweet => {
+  //   let tweetHTML = createTweetElement(tweet);
+  //   $tweetContainer.append(tweetHTML);
+  // })
+  for (let eachTweet of allTweets) {
+    let tweet = createTweetElement(eachTweet);
+    $tweetContainer.append(tweet);
+  }
+}
+
 // Test / driver code (temporary)
 // const $tweet = createTweetElement(tweetData);
 // console.log($tweet); // to see what it looks like
@@ -93,11 +99,15 @@ $('.create-tweet > form').on('submit', (event) => {
 
 // Will need to pass a callback that has renderTweets inside of it being called
 // Will need to change the for loop to work for an array
-$(document).ready(function loadtweets() {
+const loadtweets = function() {
   $.ajax({
     method: 'GET',
-    url: '/tweets/'
+    url: 'http://localhost:8080/tweets'
   })
-  .done((data) => renderTweets(data))
+  .done(renderTweets);
   // .fail(handleTweetLoadErrors);
+};
+
+loadtweets();
+
 });
