@@ -29,9 +29,9 @@ const createTweetElement = function(tweet) {
   // Define the header and all it's descendants then append to $tweet
   let $header = $('<header>');
   let $div = $('<div>');
-  let $avatar = $('<img>').addClass('avatar').text(tweetData.user.avatars);
-  let $user = $('<span>').text(tweetData.user.name);
-  let $tweeterHandle = $('<span>').addClass('handle').text(tweetData.user.handle);
+  let $avatar = $('<img>').addClass('avatar').text(tweet.user.avatars);
+  let $user = $('<span>').text(tweet.user.name);
+  let $tweeterHandle = $('<span>').addClass('handle').text(tweet.user.handle);
 
   $div
       .append($avatar)
@@ -43,14 +43,14 @@ const createTweetElement = function(tweet) {
         .appendTo($tweet);
   
 // Define the text area then append to $tweet
-  let $tweetTextMessage = $('<p>').text(tweetData.content.text)
+  let $tweetTextMessage = $('<p>').text(tweet.content.text)
 
   $tweetTextMessage
         .appendTo($tweet);
 
 // Define the footer and all it's descendants then append to $tweet
   let $footer = $('<footer>');
-  let $timestamp = $('<span>').text(tweetData['created_at']);
+  let $timestamp = $('<span>').text(tweet['created_at']);
   
   let $iconSection = $('<div>');
   let $flagIcon = $('<img>').addClass('flag-icon');
@@ -72,11 +72,6 @@ const createTweetElement = function(tweet) {
 
 const renderTweets = function(allTweets) {
   let $tweetContainer = $('#tweet-container');
-  // loops through tweets
-  // allTweets.forEach(tweet => {
-  //   let tweetHTML = createTweetElement(tweet);
-  //   $tweetContainer.append(tweetHTML);
-  // })
   for (let eachTweet of allTweets) {
     let tweet = createTweetElement(eachTweet);
     $tweetContainer.append(tweet);
