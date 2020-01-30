@@ -78,11 +78,14 @@ const insertNewestTweet = function() {
   $.ajax({
     method: 'GET',
     url: 'http://localhost:8080/tweets'
-  }).done(data => {
+  })
+    .done(data => {
     let $tweetContainer = $('#tweet-container');
     const newTweet = createTweetElement(data[data.length - 1]);
     $tweetContainer.prepend(newTweet);
-  }).done($('#tweet-text-box').val(null));
+    })
+    .done($('#tweet-text-box').val(null))
+    .done($('#counter').text(140));
 }
 
 $('.create-tweet > form').on('submit', (event) => {
