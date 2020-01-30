@@ -42,6 +42,13 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
+      <section class="error-section hide">
+        <div>
+          <i class="fas fa-exclamation-triangle"></i>
+          <p class="error-message">I'm an error message! You have gone too far! I am actually a very long error message! You must have done something very very bad!</p>
+          <i class="fas fa-exclamation-triangle"></i>
+        </div>
+      </section>
       <section class="create-tweet">
         <form action='/tweets/' method='POST'>
           <textarea id="tweet-text-box" name="text" placeholder="What are you humming about?"></textarea>
