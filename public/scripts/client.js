@@ -46,8 +46,8 @@ const createTweetElement = function(tweet) {
 
 // Define the footer and all it's descendants then append to $tweet
   let $footer = $('<footer>');
-  let $timestamp = $('<span>').text(tweet['created_at']);
-  
+  let tweetMoment = moment(tweet['created_at']).fromNow();
+  let $timestamp = $('<span>').text(tweetMoment);
   let $iconSection = $('<div>');
   let $flagIcon = $('<img>').addClass('flag-icon');
   let $shareIcon = $('<img>').addClass('share-icon');
