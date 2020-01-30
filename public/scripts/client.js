@@ -49,9 +49,9 @@ const createTweetElement = function(tweet) {
   let tweetMoment = moment(tweet['created_at']).fromNow();
   let $timestamp = $('<span>').text(tweetMoment);
   let $iconSection = $('<div>');
-  let $flagIcon = $('<img>').addClass('flag-icon');
-  let $shareIcon = $('<img>').addClass('share-icon');
-  let $heartIcon = $('<img>').addClass('heart-icon');
+  let $flagIcon = $('<i>').addClass('flag-icon').addClass('fab fa-font-awesome-flag');
+  let $shareIcon = $('<i>').addClass('share-icon').addClass('fas fa-share-alt-square');
+  let $heartIcon = $('<i>').addClass('heart-icon').addClass('fas fa-heart');
 
   $iconSection
         .append($flagIcon)
