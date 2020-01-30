@@ -17,10 +17,6 @@
 //   "created_at": 1461116232227
 // }
 
-// This function can be responsible for taking in an array of tweet objects and then appending each one to the #tweets-container. 
-// In order to do this, the renderTweets will need to leverage the createTweetElement function you wrote earlier by passing the
-// tweet object to it, then using the returned jQuery object by appending it to the #tweets-container section.
-
 $(document).ready(() => { 
 
 const createTweetElement = function(tweet) {
@@ -74,14 +70,20 @@ const renderTweets = function(allTweets) {
   let $tweetContainer = $('#tweet-container');
   for (let eachTweet of allTweets) {
     let tweet = createTweetElement(eachTweet);
-    $tweetContainer.append(tweet);
+    $tweetContainer.prepend(tweet);
   }
 }
 
-// Test / driver code (temporary)
-// const $tweet = createTweetElement(tweetData);
-// console.log($tweet); // to see what it looks like
-// $('#tweets-container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
+const insertNewestTweet = function() {
+  $.ajax({
+    method: 'GET',
+    url: 'http://localhost:8080/tweets'
+  }).done(data => {
+    let $tweetContainer = $('#tweet-container');
+    const newTweet = createTweetElement(data[data.length - 1]);
+    $tweetContainer.prepend(newTweet);
+  }).done($('#tweet-text-box').val(null));
+}
 
 $('.create-tweet > form').on('submit', (event) => {
   event.preventDefault();
@@ -95,11 +97,12 @@ $('.create-tweet > form').on('submit', (event) => {
       url: '/tweets/',
       data: $('form').serialize()
     })
+    .done(data => {
+      insertNewestTweet(data)
+    });
   }
 });
 
-// Will need to pass a callback that has renderTweets inside of it being called
-// Will need to change the for loop to work for an array
 const loadtweets = function() {
   $.ajax({
     method: 'GET',
