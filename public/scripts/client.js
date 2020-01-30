@@ -25,7 +25,7 @@ const createTweetElement = function(tweet) {
   // Define the header and all it's descendants then append to $tweet
   let $header = $('<header>');
   let $div = $('<div>');
-  let $avatar = $('<img>').addClass('avatar').text(tweet.user.avatars);
+  let $avatar = $('<img>').addClass('avatar').attr('src', tweet.user.avatars);
   let $user = $('<span>').text(tweet.user.name);
   let $tweeterHandle = $('<span>').addClass('handle').text(tweet.user.handle);
 
