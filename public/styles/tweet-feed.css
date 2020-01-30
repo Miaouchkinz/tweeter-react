@@ -34,6 +34,18 @@
   font-size: 1rem;
 }
 
+#tweet-container .tweet div {
+  display: flex;
+  align-items: center;
+}
+
+#tweet-container .tweet span {
+  display: flex;
+  padding-left: 0.5em;
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
 .tweet p {
   padding-bottom: 1rem;
   padding-left: 1rem;
