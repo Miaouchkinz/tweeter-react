@@ -88,10 +88,13 @@ const insertNewestTweet = function() {
 $('.create-tweet > form').on('submit', (event) => {
   event.preventDefault();
   if (!$('#tweet-text-box').val()) {
-    alert('Your tweet is empty, please try again!');
+    $('.error-message').text('Your tweet is empty, please try again!');
+    $('.error-section').removeClass('hide');
   } else if ($('#counter').hasClass('invalid-char-count')){
-    alert('Oops! Your tweet is over our max 140 characters count.');
+    $('.error-message').text('Oops! Your tweet is over our max 140 characters count.');
+    $('.error-section').removeClass('hide');
   } else {
+    $('.error-section').addClass('hide');
     $.ajax({
       method: 'POST',
       url: '/tweets/',
