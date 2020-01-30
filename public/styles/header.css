@@ -19,4 +19,9 @@ nav + header {
   margin-top: 1px;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 1.2em;
+  font-weight: 300;
+}
+
+#user-id strong {
+  font-weight: 700;
 }
