@@ -85,11 +85,17 @@ const renderTweets = function(allTweets) {
 
 $('.create-tweet > form').on('submit', (event) => {
   event.preventDefault();
-  $.ajax({
-    method: 'POST',
-    url: '/tweets/',
-    data: $('form').serialize()
-  })
+  if (!$('#tweet-text-box').val()) {
+    alert('Your tweet is empty, please try again!');
+  } else if ($('#counter').hasClass('invalid-char-count')){
+    alert('Oops! Your tweet is over our max 140 characters count.');
+  } else {
+    $.ajax({
+      method: 'POST',
+      url: '/tweets/',
+      data: $('form').serialize()
+    })
+  }
 });
 
 // Will need to pass a callback that has renderTweets inside of it being called
