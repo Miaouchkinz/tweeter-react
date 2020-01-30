@@ -1,18 +1,3 @@
-#app-title {
-  font-family: 'Bungee', cursive, sans-serif;
-  font-size: 1.75em;
-}
-
-#new-tweet {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 1em;
-  font-weight: 100;
-}
-
-#new-tweet strong {
-  font-weight: 700;
-}
-
 #navbar {
   display: flex;
   justify-content: space-between;
@@ -24,5 +9,72 @@
   width: 100%;
   z-index: 3;
   background: #4056A1;
+}
+
+#navbar > div {
+  display: flex;
+  flex-direction: column;
+}
+
+#app-title {
+  font-family: 'Bungee', cursive, sans-serif;
+  font-size: 1.75em;
   color: #FFFFFF;
+}
+
+#new-tweet {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1em;
+  font-weight: 100;
+  color: #FFFFFF;
+}
+
+#new-tweet strong {
+  font-weight: 700;
+}
+
+#arrow-icon.fas.fa-angle-double-down {
+  margin: 0 auto;
+  color: #FF9505;
+  padding-top: 0.5em;
+}
+
+.bounce {
+  position: relative;
+  -moz-animation: bounce 0.65s infinite linear;
+  -o-animation: bounce 0.65s infinite linear;
+  -webkit-animation: bounce 0.65s infinite linear;
+  animation: bounce 0.65s infinite linear;
+}
+
+
+@-webkit-keyframes bounce {
+  0% { top: 0; }
+  50% { top: -0.2em; }
+  70% { top: -0.3em; }
+  100% { top: 0; }
+}
+@-moz-keyframes bounce {
+  0% { top: 0; }
+  50% { top: -0.2em; }
+  70% { top: -0.3em; }
+  100% { top: 0; }
+}
+@-o-keyframes bounce {
+  0% { top: 0; }
+  50% { top: -0.2em; }
+  70% { top: -0.3em; }
+  100% { top: 0; }
+}
+@-ms-keyframes bounce {
+  0% { top: 0; }
+  50% { top: -0.2em; }
+  70% { top: -0.3em; }
+  100% { top: 0; }
+}
+@keyframes bounce {
+  0% { top: 0; }
+  50% { top: -0.2em; }
+  70% { top: -0.3em; }
+  100% { top: 0; }
 }
