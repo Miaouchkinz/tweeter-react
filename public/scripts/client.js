@@ -29,6 +29,8 @@ const createTweetElement = function(tweet) {
   let $user = $('<span>').text(tweet.user.name);
   let $tweeterHandle = $('<span>').addClass('handle').text(tweet.user.handle);
 
+  // Always start a chain on the line of its target, 
+  //  additional calls go on the next line, tabbed in once
   $div
       .append($avatar)
       .append($user);
@@ -68,9 +70,9 @@ const createTweetElement = function(tweet) {
 
 const renderTweets = function(allTweets) {
   let $tweetContainer = $('#tweet-container');
-  for (let eachTweet of allTweets) {
-    let tweet = createTweetElement(eachTweet);
-    $tweetContainer.prepend(tweet);
+  for (let tweet of allTweets) {
+    let newTweet = createTweetElement(tweet);
+    $tweetContainer.prepend(newTweet);
   }
 }
 
@@ -80,9 +82,9 @@ const insertNewestTweet = function() {
     url: 'http://localhost:8080/tweets'
   })
     .done(data => {
-    let $tweetContainer = $('#tweet-container');
-    const newTweet = createTweetElement(data[data.length - 1]);
-    $tweetContainer.prepend(newTweet);
+      let $tweetContainer = $('#tweet-container');
+      const newTweet = createTweetElement(data[data.length - 1]);
+      $tweetContainer.prepend(newTweet);
     })
     .done($('#tweet-text-box').val(null))
     .done($('#counter').text(140));
@@ -90,14 +92,17 @@ const insertNewestTweet = function() {
 
 $('.create-tweet > form').on('submit', (event) => {
   event.preventDefault();
+  // error: textbox empty
   if (!$('#tweet-text-box').val()) {
-    $('.error-message').text('Your tweet is empty, please try again!');
-    $('.error-section').removeClass('hide');
+    $('.error-message').hide(200).text('Your tweet is empty, please try again!').show(200);
+    $('.error-section').slideDown();
+  // error: charCount > 140
   } else if ($('#counter').hasClass('invalid-char-count')){
-    $('.error-message').text('Oops! Your tweet is over our max 140 characters count.');
-    $('.error-section').removeClass('hide');
+    $('.error-message').hide(200).text('Oops! Your tweet is over our max 140 characters count.').show(200);
+    $('.error-section').slideDown();
+  // valid message
   } else {
-    $('.error-section').addClass('hide');
+    $('.error-section').slideUp();
     $.ajax({
       method: 'POST',
       url: '/tweets/',
