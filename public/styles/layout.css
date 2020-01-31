@@ -16,8 +16,7 @@ html {
 
 body {
   color: #545149;
-  background-color: #d49731;
-  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+  background-color: #cec9c0;
   font-size: 24px;
   font-family:'Source Sans Pro', sans-serif;
 }
@@ -28,9 +27,26 @@ main {
   flex-direction: column;
   margin: auto;
   width: 90%;
-  background-color: #d49731;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+ @media only screen and (min-width: 1024px) {
+  #navbar {
+    position: fixed;
+    background: #4056A1;
+  }
+
+  body {
+    display: flex;
+    flex-direction: row;
+    margin-top: 11rem
+  }
+
+  nav + header {
+    width: 60%;
+    margin: 1.5em 2em
+  }
+
+ }
