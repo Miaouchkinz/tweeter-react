@@ -2,13 +2,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
+  position: static;
   padding: 1.5em;
   top: 0;
   height: 120px;
   width: 100%;
   z-index: 3;
-  background: #4056A1;
+  background-color: #d49731;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
 }
 
 #navbar > div {
@@ -35,7 +36,7 @@
 
 #arrow-icon.fas.fa-angle-double-down {
   margin: 0 auto;
-  color: #FF9505;
+  color: #C73E1D;
   padding-top: 0.5em;
 }
 
