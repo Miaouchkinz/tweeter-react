@@ -25,10 +25,6 @@
   text-align: center;
 }
 
-.hide {
-  display: none;
-}
-
 .create-tweet {
   display: flex;
   flex-direction: column;
@@ -38,6 +34,10 @@
   background-color: #cec9c0;
   color: rgb(56, 55, 55);
   font-family: 'Source Sans Pro', sans-serif;
+}
+
+.hide {
+  display: none;
 }
 
 .button {
