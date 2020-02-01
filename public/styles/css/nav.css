@@ -1,0 +1,87 @@
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  position: static;
+  padding: 1.5em;
+  top: 0;
+  height: 120px;
+  width: 100%;
+  z-index: 3;
+  background-color: #d49731;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png"); }
+  #navbar #app-title {
+    font-family: 'Bungee', cursive, sans-serif;
+    font-size: 1.75em;
+    color: #FFFFFF; }
+  #navbar div {
+    display: flex;
+    flex-direction: column; }
+    #navbar div #new-tweet {
+      font-family: 'Source Sans Pro', sans-serif;
+      font-size: 1em;
+      font-weight: 300;
+      color: #FFFFFF; }
+      #navbar div #new-tweet strong {
+        font-weight: 700;
+        color: #C73E1D; }
+    #navbar div #arrow-icon.fas.fa-angle-double-down {
+      margin: 0 auto;
+      color: #C73E1D;
+      padding-top: 0.5em; }
+
+.bounce {
+  position: relative;
+  -moz-animation: bounce 0.65s infinite linear;
+  -o-animation: bounce 0.65s infinite linear;
+  -webkit-animation: bounce 0.65s infinite linear;
+  animation: bounce 0.65s infinite linear; }
+
+@-webkit-keyframes bounce {
+  0% {
+    top: 0; }
+  50% {
+    top: -0.2em; }
+  70% {
+    top: -0.3em; }
+  100% {
+    top: 0; } }
+
+@-moz-keyframes bounce {
+  0% {
+    top: 0; }
+  50% {
+    top: -0.2em; }
+  70% {
+    top: -0.3em; }
+  100% {
+    top: 0; } }
+
+@-o-keyframes bounce {
+  0% {
+    top: 0; }
+  50% {
+    top: -0.2em; }
+  70% {
+    top: -0.3em; }
+  100% {
+    top: 0; } }
+
+@-ms-keyframes bounce {
+  0% {
+    top: 0; }
+  50% {
+    top: -0.2em; }
+  70% {
+    top: -0.3em; }
+  100% {
+    top: 0; } }
+
+@keyframes bounce {
+  0% {
+    top: 0; }
+  50% {
+    top: -0.2em; }
+  70% {
+    top: -0.3em; }
+  100% {
+    top: 0; } }
