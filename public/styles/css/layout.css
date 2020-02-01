@@ -1,0 +1,73 @@
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+/*
+ * Global layout stuff
+ */
+body {
+  background-color: #cec9c0;
+  color: #545149;
+  font-size: 24px;
+  font-family: 'Source Sans Pro', sans-serif; }
+  body main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+    margin: auto; }
+
+@media only screen and (min-width: 1024px) {
+  body {
+    display: flex;
+    flex-direction: row;
+    margin-top: 11rem; }
+    body #navbar {
+      position: fixed;
+      background: #4056A1; }
+    body nav + header {
+      width: 60%;
+      margin: 3rem 3rem; } }
+
+@media only screen and (max-width: 625px) {
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+    font-size: 1.45rem; }
+    #navbar #arrow-icon {
+      padding-top: 0.75 rem;
+      z-index: 3;
+      font-size: 1.85rem; }
+  nav + header {
+    height: 425px; }
+    nav + header #user-id {
+      margin-top: 0;
+      font-size: 1.25em; }
+  .error-section {
+    padding: 0;
+    font-size: 1.2rem; }
+  .create-tweet {
+    padding: 1.25rem 0.5rem; }
+    .create-tweet textarea {
+      height: 40px;
+      font-size: 1.3rem;
+      margin-bottom: 0.25rem; }
+    .create-tweet form div {
+      font-size: 1.25rem; }
+  #tweet-container .tweet {
+    margin: 1.25rem 0; }
+    #tweet-container .tweet header {
+      padding: 0.5rem 0.5rem 0;
+      font-size: 1.25rem; }
+    #tweet-container .tweet p {
+      margin-top: 0.5rem;
+      font-size: 1.5rem; } }
