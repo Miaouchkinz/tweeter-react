@@ -61,7 +61,7 @@
       color: $fonts-secondary-color;
       font-family: $font-style-loud;
   
-      .invalid-char-count {
+      &.invalid-char-count {
         color: $alert;
       }
     }

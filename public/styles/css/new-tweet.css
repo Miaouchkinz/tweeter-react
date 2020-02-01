@@ -47,7 +47,7 @@
     .create-tweet form div #counter {
       color: #383737;
       font-family: "Bungee", cursive, sans-serif; }
-      .create-tweet form div #counter .invalid-char-count {
+      .create-tweet form div #counter.invalid-char-count {
         color: #E63B2E; }
 
 .hide {
