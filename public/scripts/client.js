@@ -53,17 +53,12 @@ const renderTweets = function(allTweets) {
   }
 }
 
-const insertNewestTweet = function() {
-  $.ajax({
-    method: 'GET',
-    url: 'http://localhost:8080/tweets'
-  }).done(data => {
-    let $tweetContainer = $('#tweet-container');
-    const newTweet = createTweetElement(data[data.length - 1]);
-    $tweetContainer.prepend(newTweet);
-    })
-    .done($('#tweet-text-box').val(null))
-    .done($('#counter').text(140));
+const insertNewestTweet = function(data) {
+  let $tweetContainer = $('#tweet-container');
+  let newTweet = createTweetElement(data);
+  $tweetContainer.prepend(newTweet);
+  $('#tweet-text-box').val(null);
+  $('#counter').text(140);
 }
 
 $('.create-tweet > form').on('submit', (event) => {
