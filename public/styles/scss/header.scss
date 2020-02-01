@@ -1,0 +1,24 @@
+nav + header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative; 
+  width: 100%;
+  height: 400px;
+  color: #FFFFFF;
+  background-color: #d49731;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+}
+
+#user-id {
+  position: relative;
+  margin-top: 1px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 300;
+
+  strong { 
+    font-weight: 700;
+  }
+}

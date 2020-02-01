@@ -8,21 +8,16 @@ nav + header {
   color: #FFFFFF;
   background-color: #d49731;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
-  position: relative; 
-}
+  position: relative; }
 
 #avatar {
-  position: relative;
-}
+  position: relative; }
 
 #user-id {
   position: relative;
   margin-top: 1px;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 1.2em;
-  font-weight: 300;
-}
-
-#user-id strong {
-  font-weight: 700;
-}
+  font-weight: 300; }
+  #user-id strong {
+    font-weight: 700; }
