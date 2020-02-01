@@ -29,24 +29,22 @@ main {
   width: 90%;
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
- @media only screen and (min-width: 1024px) {
-  #navbar {
-    position: fixed;
-    background: #4056A1;
-  }
 
-  body {
-    display: flex;
-    flex-direction: row;
-    margin-top: 11rem
-  }
+@media only screen and (min-width: 1024px) {
+#navbar {
+  position: fixed;
+  background: #4056A1;
+}
 
-  nav + header {
-    width: 60%;
-    margin: 1.5em 2em
-  }
+body {
+  display: flex;
+  flex-direction: row;
+  margin-top: 11rem
+}
 
- }
+nav + header {
+  width: 60%;
+  margin: 1.5em 2em
+}
+
+}
