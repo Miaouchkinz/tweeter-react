@@ -1,3 +1,5 @@
+@import "variables";
+
 #navbar {
   display: flex;
   justify-content: space-between;
@@ -6,13 +8,13 @@
   top: 0;
   padding: 2rem;
   z-index: 3;
-  background-color: #d49731;
-  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+  background-color: $bkgrd-secondary-color;
+  background-image: $bkgrd-secondary-image;
 
   #app-title {
     font-size: 2.5rem;
-    color: #FFFFFF;
-    font-family: 'Bungee', cursive, sans-serif;
+    color: $fonts-primary-color;
+    font-family: $font-style-loud;
   }
 
   div {
@@ -22,19 +24,19 @@
     #new-tweet {
       font-size: 1.75rem;
       font-weight: 300;
-      color: #FFFFFF;
-      font-family: 'Source Sans Pro', sans-serif;
+      color: $fonts-primary-color;
+      font-family: $font-style-default;
 
       strong {
         font-weight: 700;
-        color: #C73E1D;
+        color: $alert;
       }
     }
 
     #arrow-icon.fas.fa-angle-double-down {
       margin: 0 auto;
       padding-top: 0.5rem;
-      color: #C73E1D;
+      color: $alert;
     }
   }
 }

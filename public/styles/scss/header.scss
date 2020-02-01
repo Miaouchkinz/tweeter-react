@@ -1,3 +1,5 @@
+@import "variables";
+
 nav + header {
   display: flex;
   justify-content: center;
@@ -6,15 +8,15 @@ nav + header {
   position: relative; 
   width: 100%;
   height: 400px;
-  color: #FFFFFF;
-  background-color: #d49731;
-  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+  color: $fonts-primary-color;
+  background-color: $bkgrd-secondary-color;
+  background-image: $bkgrd-secondary-image;
 }
 
 #user-id {
   position: relative;
   margin-top: 1px;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: $font-style-default;
   font-size: 1.75rem;
   font-weight: 300;
 

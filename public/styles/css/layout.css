@@ -14,9 +14,9 @@ html {
  */
 body {
   background-color: #cec9c0;
-  color: #545149;
+  color: #383737;
   font-size: 24px;
-  font-family: 'Source Sans Pro', sans-serif; }
+  font-family: "Source Sans Pro", sans-serif; }
   body main {
     display: flex;
     justify-content: center;
@@ -51,7 +51,7 @@ body {
     height: 425px; }
     nav + header #user-id {
       margin-top: 0;
-      font-size: 1.25em; }
+      font-size: 1.75rem; }
   .error-section {
     padding: 0;
     font-size: 1.2rem; }
@@ -70,4 +70,4 @@ body {
       font-size: 1.25rem; }
     #tweet-container .tweet p {
       margin-top: 0.5rem;
-      font-size: 1.5rem; } }
+      font-size: 1.25rem; } }

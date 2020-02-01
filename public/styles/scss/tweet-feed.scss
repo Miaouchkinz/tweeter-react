@@ -1,13 +1,15 @@
+@import "variables";
+
 #tweet-container {
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-color: #cec9c0;
+  background-color: $bkgrd-primary-color;
 
   .tweet {
     margin: 2.5rem;
     padding: 0.25rem 0.25rem;
-    border: 0.25rem solid rgb(56, 55, 55);
+    border: 0.25rem solid $fonts-secondary-color;
     opacity: 0.8;
 
     header {
@@ -38,9 +40,9 @@
       margin-top: 1.25rem;
       overflow-wrap: break-word;
       word-wrap: break-word;
-      border-bottom: 3px solid rgb(56, 55, 55);
-      background-color: #cec9c0;
-      font-family: 'Source Sans Pro', sans-serif;
+      border-bottom: 3px solid $fonts-secondary-color;
+      background-color: $bkgrd-primary-color;
+      font-family: $font-style-default;
     }
 
     footer {
