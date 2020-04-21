@@ -1,6 +1,8 @@
 # Tweeter Project
 
-Tweeter is a simple, single-page Twitter clone that uses jQuery, HTML5, and SCSS to practice our front-end skills.
+Tweeter-React is a refactor project transforming the [single-page Twitter clone](https://github.com/Miaouchkinz/tweeter), Tweeter, from JQuery to React components.
+
+Refactor is **currently in progress**, ReadMe will be updated as the project moves forward.
 
 ## Final Product
 
@@ -26,6 +28,7 @@ Hover effect + Validation error example
 
 ## Dependencies
 
+- React
 - Express
 - Node 5.10.x or above
 - Body-parser
