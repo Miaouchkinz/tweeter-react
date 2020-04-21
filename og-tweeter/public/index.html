@@ -36,7 +36,6 @@
   </head>
 
   <body>
-
     <nav id= "navbar">
       <span id="app-title">tweeter</span>
       <div>
@@ -51,8 +50,9 @@
       <h2 id="user-id"><strong>Gab </strong>Richard</h2>
     </header>
 
+    <!-- Main content container -->
     <main class="container">
-
+      <!-- Error container for validation error messages -->
       <section class="error-section hide">
         <div>
           <i class="fas fa-exclamation-triangle"></i>
@@ -60,7 +60,7 @@
           <i class="fas fa-exclamation-triangle"></i>
         </div>
       </section>
-
+      <!-- New tweet input vox -->
       <section class="create-tweet hide">
         <form action="/tweets" method="POST">
           <textarea id="tweet-text-box" name="text" placeholder="What are you humming about?"></textarea>
@@ -70,7 +70,7 @@
           </div>
         </form>
       </section>
-
+      <!-- Container for tweet list -->
       <section id="tweet-container">
         <!-- Populates tweet via renderTweets function in client.js -->
       </section>
